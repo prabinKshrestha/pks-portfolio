@@ -1,0 +1,245 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "pks-main-site": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/pks-main-site",
+      "sourceRoot": "projects/pks-main-site/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/pks-main-site",
+            "index": "projects/pks-main-site/src/index.html",
+            "main": "projects/pks-main-site/src/main.ts",
+            "polyfills": "projects/pks-main-site/src/polyfills.ts",
+            "tsConfig": "projects/pks-main-site/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/pks-main-site/src/favicon.ico",
+              "projects/pks-main-site/src/assets"
+            ],
+            "styles": [
+              "projects/pks-main-site/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/pks-main-site/src/environments/environment.ts",
+                  "with": "projects/pks-main-site/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "pks-main-site:build:production"
+            },
+            "development": {
+              "browserTarget": "pks-main-site:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "pks-main-site:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/pks-main-site/src/test.ts",
+            "polyfills": "projects/pks-main-site/src/polyfills.ts",
+            "tsConfig": "projects/pks-main-site/tsconfig.spec.json",
+            "karmaConfig": "projects/pks-main-site/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/pks-main-site/src/favicon.ico",
+              "projects/pks-main-site/src/assets"
+            ],
+            "styles": [
+              "projects/pks-main-site/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "pks-site-client": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/pks-site-client",
+      "sourceRoot": "projects/pks-site-client/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/pks-site-client",
+            "index": "projects/pks-site-client/src/index.html",
+            "main": "projects/pks-site-client/src/main.ts",
+            "polyfills": "projects/pks-site-client/src/polyfills.ts",
+            "tsConfig": "projects/pks-site-client/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/pks-site-client/src/favicon.ico",
+              "projects/pks-site-client/src/assets"
+            ],
+            "styles": [
+              "projects/pks-site-client/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/pks-site-client/src/environments/environment.ts",
+                  "with": "projects/pks-site-client/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "pks-site-client:build:production"
+            },
+            "development": {
+              "browserTarget": "pks-site-client:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "pks-site-client:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/pks-site-client/src/test.ts",
+            "polyfills": "projects/pks-site-client/src/polyfills.ts",
+            "tsConfig": "projects/pks-site-client/tsconfig.spec.json",
+            "karmaConfig": "projects/pks-site-client/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/pks-site-client/src/favicon.ico",
+              "projects/pks-site-client/src/assets"
+            ],
+            "styles": [
+              "projects/pks-site-client/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "pks-lib-models": {
+      "projectType": "library",
+      "root": "projects/pks-lib-models",
+      "sourceRoot": "projects/pks-lib-models/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/pks-lib-models/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/pks-lib-models/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/pks-lib-models/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/pks-lib-models/src/test.ts",
+            "tsConfig": "projects/pks-lib-models/tsconfig.spec.json",
+            "karmaConfig": "projects/pks-lib-models/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "pks-main-site"
+}
