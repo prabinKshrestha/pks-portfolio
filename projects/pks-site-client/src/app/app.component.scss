@@ -1,0 +1,20 @@
+$min-width-sidenav: 320px;
+.layout-wrapper {
+    margin: 0 10vw;
+    display: flex;
+    .sidenav-wrapper {
+        min-width: $min-width-sidenav;
+        background-color: rgba(#3e64ff, 0.1);
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        position: fixed;
+    }
+    .content-wrapper {
+        flex-grow: 1;
+        margin-left: $min-width-sidenav;
+        .section-wrapper {
+            padding: 50px 40px;
+        }
+    }
+}
