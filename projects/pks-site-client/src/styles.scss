@@ -14,5 +14,20 @@ html {
         .text-center {
             text-align: center;
         }
+        .section-title {
+            font-size: 45px;
+            font-weight: 700;
+            color: black;
+            margin-bottom: 38px;
+            position: relative;
+            &::before {
+                content: "";
+                width: 100px;
+                border-bottom: 6px solid #3e64ff;
+                position: absolute;
+                bottom: 5px;
+                left: 0;
+            }
+        }
     }
 }
