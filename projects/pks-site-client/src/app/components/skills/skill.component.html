@@ -1,0 +1,15 @@
+<div class="pks-skill">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-container">
+        <div class="column" *ngFor="let item of skills">
+            <div class="progress-wrap">
+                <h3>{{item.Name}}</h3>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" [style.width]="item.Percent + '%'">
+                        <span>{{ item.Percent }}%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

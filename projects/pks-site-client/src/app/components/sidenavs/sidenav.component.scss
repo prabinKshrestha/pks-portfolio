@@ -57,6 +57,7 @@
                 a {
                     text-decoration: none;
                     cursor: pointer;
+                    color: inherit;
                     &.active {
                         color: #3e64ff;
                         border-bottom: 1px solid #3e64ff;
