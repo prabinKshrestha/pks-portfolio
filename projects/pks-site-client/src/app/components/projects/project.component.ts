@@ -11,4 +11,8 @@ export class ProjectComponent implements OnInit {
 
     ngOnInit(): void { }
 
+    scrollToSection(elementId: string) {
+      document.getElementById(elementId)?.scrollIntoView();
+    }
+
 }
