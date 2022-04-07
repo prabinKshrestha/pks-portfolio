@@ -1,0 +1,143 @@
+<div class="pks-project">
+    <h2 class="section-title">Project</h2>
+    <div class="list-container">
+        <div class="list-item">
+            <div class="top-container">
+                <div class="left">
+                    <img src="../../../assets/images/prabin-kumar-shrestha.jpg" />
+                </div>
+                <div class="right">
+                    <h3 class="name">
+                        Portfolio Website
+                    </h3>
+                    <h4 class="owner">
+                        Self Project
+                    </h4>
+                    <div class="links">
+                        <ng-container [ngTemplateOutlet]="githubLink" [ngTemplateOutletContext]="{ url:'https://github.com/prabinKshrestha/pks-portfolio' }"></ng-container>
+                    </div>
+                </div>
+            </div>
+            <div class="description-container">
+                <ul>
+                    <li>A small river named Duden flows by their place and supplies it with the necessary regelialia.</li>
+                    <li>A small river named Duden flows by their place.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="top-container">
+                <div class="left">
+                    <img src="../../../assets/images/projects/pension-pro.jpg" />
+                </div>
+                <div class="right">
+                    <h3 class="name">
+                        Pension Pro - Workflow Management System
+                        <ng-container [ngTemplateOutlet]="normalLink" [ngTemplateOutletContext]="{ url:'https://pensionpro.com/' }"></ng-container>
+                    </h3>
+                    <h4 class="owner">
+                        Dolphin Dive Technology Pvt. Ltd.
+                        <ng-container [ngTemplateOutlet]="normalLink" [ngTemplateOutletContext]="{ url:'https://dolphindivetech.com/' }"></ng-container>
+                    </h4>
+                </div>
+            </div>
+            <div class="description-container">
+                <ul>
+                    <li>A small river named Duden flows by their place and supplies it with the necessary regelialia.</li>
+                    <li>A small river named Duden flows by their place.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="top-container">
+                <div class="left">
+                    <img src="../../../assets/images/projects/ccs-nepal.png" />
+                </div>
+                <div class="right">
+                    <h3 class="name">
+                        CCS Nepal - Job Portal
+                    </h3>
+                    <h4 class="owner">
+                        Nectar Digit Pvt. Ltd.
+                        <ng-container [ngTemplateOutlet]="normalLink" [ngTemplateOutletContext]="{ url:'https://nectardigit.com/' }"></ng-container>
+                    </h4>
+                    <div class="links">
+                        <ng-container [ngTemplateOutlet]="projectLink" [ngTemplateOutletContext]="{ url:'https://www.ccsnepal.com/' }"></ng-container>
+                    </div>
+                </div>
+            </div>
+            <div class="description-container">
+                <ul>
+                    <li>A small river named Duden flows by their place and supplies it with the necessary regelialia.</li>
+                    <li>A small river named Duden flows by their place.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="top-container">
+                <div class="left">
+                    <img src="../../../assets/images/projects/capital-nepal.png" />
+                </div>
+                <div class="right">
+                    <h3 class="name">
+                        Capital Nepal - News Portal
+                    </h3>
+                    <h4 class="owner">
+                        Nectar Digit Pvt. Ltd.
+                        <ng-container [ngTemplateOutlet]="normalLink" [ngTemplateOutletContext]="{ url:'https://nectardigit.com/' }"></ng-container>
+                    </h4>
+                    <div class="links">
+                        <ng-container [ngTemplateOutlet]="projectLink" [ngTemplateOutletContext]="{ url:'https://www.capitalnepal.com/' }"></ng-container>
+                    </div>
+                </div>
+            </div>
+            <div class="description-container">
+                <ul>
+                    <li>A small river named Duden flows by their place and supplies it with the necessary regelialia.</li>
+                    <li>A small river named Duden flows by their place.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="top-container">
+                <div class="left">
+                    <img src="../../../assets/images/projects/capital-nepal.png" />
+                </div>
+                <div class="right">
+                    <h3 class="name">
+                        Athrill Inventory Management System
+                    </h3>
+                    <h4 class="owner">
+                        Self Project - Athrill Technology Pvt Ltd.
+                        <ng-container [ngTemplateOutlet]="normalLink" [ngTemplateOutletContext]="{ url:'https://techathrill.com/' }"></ng-container>
+                    </h4>
+                    <div class="links">
+                        <ng-container [ngTemplateOutlet]="projectLink" [ngTemplateOutletContext]="{ url:'https://play.google.com/store/apps/details?id=com.techathrill.aim' }"></ng-container>
+                        <ng-container [ngTemplateOutlet]="githubLink" [ngTemplateOutletContext]="{ url:'https://github.com/prabinKshrestha/inventory-management-system' }"></ng-container>
+                    </div>
+                </div>
+            </div>
+            <div class="description-container">
+                <ul>
+                    <li>A small river named Duden flows by their place and supplies it with the necessary regelialia.</li>
+                    <li>A small river named Duden flows by their place.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #githubLink let-url="url">
+    <a class="link-opener" [href]="url" target="_blank" title="Click to open the Git Repository">
+        <span class="topic">Github</span><i class="fa-brands fa-git-alt"></i>
+    </a>
+</ng-template>
+<ng-template #projectLink let-url="url">
+    <a class="link-opener" [href]="url" target="_blank" title="Click to view the project">
+        <span class="topic">View</span><i class="fa-solid fa-up-right-from-square"></i>
+    </a>
+</ng-template>
+<ng-template #normalLink let-url="url">
+    <a class="link-opener" [href]="url" target="_blank">
+        <i class="fa-solid fa-up-right-from-square"></i>
+    </a>
+</ng-template>

@@ -1,0 +1,57 @@
+.pks-project {
+    .list-container {
+        .list-item {
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+            .top-container {
+                display: flex;
+                .left {
+                    img {
+                        height: 110px;
+                        width: 110px;
+                        margin-right: 20px;
+                        border-radius: 8px;
+                        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                        object-fit: contain;
+                    }
+                }
+                .right {
+                    flex-grow: 1;
+                    p,
+                    h3,
+                    h4 {
+                        margin: 0;
+                    }
+                    .date {
+                        font-weight: bold;
+                        color: #3e64ff;
+                    }
+                    .name {
+                        color: #000;
+                        font-size: 24px;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+                    .owner {
+                        color: black;
+                        font-weight: 500;
+                        font-size: 18px;
+                    }
+                    .links {
+                        color: black;
+                        .link-opener {
+                            &:first-child {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .description-container {
+                ul {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

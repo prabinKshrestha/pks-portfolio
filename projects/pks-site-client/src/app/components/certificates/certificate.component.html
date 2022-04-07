@@ -6,7 +6,7 @@
                 <i class="fa-solid fa-certificate"></i>
             </div>
             <div class="right">
-                <p class="date">{{ item.StartDate | date: 'MMMM YYYY' }} - {{ item.EndDate ? (item.EndDate | date: 'MMMM YYYY'): 'No Expiration Date' }}</p>
+                <p class="date">{{ item.StartDate | date: 'MMMM, YYYY' }} - {{ item.EndDate ? (item.EndDate | date: 'MMMM, YYYY'): 'No Expiration Date' }}</p>
                 <h3 class="name">
                     {{ item.Name }}
                     <a class="link-opener" [href]="item.Url" target="_blank">

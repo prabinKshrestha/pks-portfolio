@@ -34,7 +34,15 @@ html {
             text-decoration: none;
             cursor: pointer;
             color: #999;
-            margin-left: 10px;
+            margin: 0 10px;
+            font-size: 18px;
+            .topic {
+                font-size: 16px;
+                margin-right: 5px;
+            }
+            .fa-git-alt {
+                font-size: 22px;
+            }
         }
     }
 }

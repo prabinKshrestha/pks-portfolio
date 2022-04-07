@@ -8,6 +8,7 @@ import { CertificateComponent } from './components/certificates/certificate.comp
 import { EducationComponent } from './components/educations/education.component';
 import { ExperienceComponent } from './components/experiences/experience.component';
 import { ExtraActivityComponent } from './components/extra-activities/extra-activity.component';
+import { ProjectComponent } from './components/projects/project.component';
 import { SidenavComponent } from './components/sidenavs/sidenav.component';
 import { SkillComponent } from './components/skills/skill.component';
 import { WelcomeComponent } from './components/welcomes/welcome.component';
@@ -22,7 +23,8 @@ import { WelcomeComponent } from './components/welcomes/welcome.component';
         SkillComponent,
         ExperienceComponent,
         ExtraActivityComponent,
-        CertificateComponent
+        CertificateComponent,
+        ProjectComponent,
     ],
     imports: [
         BrowserModule,
