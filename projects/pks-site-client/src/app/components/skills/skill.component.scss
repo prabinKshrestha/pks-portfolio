@@ -1,4 +1,36 @@
 .pks-skill {
+    .skill-set {
+        .skill-set-item {
+            margin-bottom: 20px;
+            .category {
+                margin: 0;
+                font-weight: bold;
+                color: #3e64ff;
+            }
+            ul {
+                margin-top: 0;
+                .skill-items-set {
+                    .skill-items {
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin: 0;
+                        color: black;
+                        font-weight: 500;
+                        font-size: 16px;
+                        span {
+                            &:not(:last-child) {
+                                &::after {
+                                    content: '|';
+                                    margin: 0 5px;
+                                    color: #999;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     .skills-container {
         display: flex;
         flex-wrap: wrap;
@@ -43,10 +75,11 @@
                         span {
                             position: absolute;
                             color: #000;
-                            bottom: 15px;
+                            bottom: 12px;
                             right: 0;
-                            font-size: 13px;
+                            font-size: 12px;
                             font-weight: 500;
+                            background-color: rgba(256, 256, 256, 0.7);
                         }
                     }
                 }

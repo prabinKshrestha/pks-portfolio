@@ -1,5 +1,17 @@
 <div class="pks-skill">
     <h2 class="section-title">Skills</h2>
+    <div class="skill-set">
+        <div class="skill-set-item" *ngFor="let category of skillCategories">
+            <p class="category">{{category.Name}}</p>
+            <ul>
+                <li class="skill-items-set" *ngFor="let skillSet of category.Skills">
+                    <div class="skill-items">
+                        <span *ngFor="let skill of skillSet">{{skill}}</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
     <div class="skills-container">
         <div class="column" *ngFor="let item of skills">
             <div class="progress-wrap">

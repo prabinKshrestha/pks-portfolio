@@ -1,37 +1,91 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'pks-skill',
-  templateUrl: './skill.component.html',
-  styleUrls: ['./skill.component.scss']
+    selector: 'pks-skill',
+    templateUrl: './skill.component.html',
+    styleUrls: ['./skill.component.scss']
 })
 export class SkillComponent implements OnInit {
 
-  public skills: SkillModel[] = [];
+    public skills: SkillModel[] = [];
+    public skillCategories: SkillCategoryModel[] = [];
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit(): void {
-    this.skills = [
-      new SkillModel('.NET', 90),
-      new SkillModel('Python', 50),
-      new SkillModel('Pandas', 80),
-      new SkillModel('Angular', 40),
-      new SkillModel('React', 30),
-      new SkillModel('FLutter', 10),
-      new SkillModel('WPF', 80),
-      new SkillModel('.NET', 60),
-    ]
-  }
+    ngOnInit(): void {
+        this.skillCategories = [
+            new SkillCategoryModel('Programming', [
+                ['C#', '.NET - Web API, MVC, Razor', 'Entity Framework', 'C++', 'C',],
+                ['JavaScript', 'TypeScript', 'Angular, Angular Material', 'React', 'jQuery, AJAX'],
+                ['Python', 'Pandas, NumPy', 'R'],
+                ['Dart', 'Flutter'],
+                ['HTML', 'CSS/SCSS'],
+                ['CI-CD'],
+            ]),
+            new SkillCategoryModel('Database', [
+                ['SQL Server/MSSQL', 'MySQL', 'PostgreSQL'],
+                ['MongoDB', 'Redis Cache']
+            ]),
+            new SkillCategoryModel('Cloud Services', [
+                ['Rackspace'],
+                ['Azure Services', 'Azure Queue', 'Azure Blob Storage', 'Azure Cache for Redis', 'Azure Functions', 'Azure DevOps']
+            ]),
+            new SkillCategoryModel('Software', [
+                ['Visual Studio', 'VS Code', 'Jet Brains IDE', 'Android Studio'],
+                ['SSMS', 'Azure Data Studio', 'Robo 3T'],
+                ['Jupyter', 'R Studio'],
+                ['Postman'],
+                ['GIT', 'TFS']
+            ]),
+            new SkillCategoryModel('Soft Skills', [
+                ['Good Communication', 'Time Management',],
+                ['Problem Solving', 'Adaptability and Flexibility', 'Decision Making'],
+                ['Analysis', 'Research', 'Creative']
+            ]),
+        ];
+        this.skills = [
+            new SkillModel('C#', 90),
+            new SkillModel('.NET', 90),
+            new SkillModel('Entity Framework', 85),
+            new SkillModel('SQL', 80),
+            new SkillModel('Javascript', 85),
+            new SkillModel('Angular', 80),
+            new SkillModel('Angular Material', 80),
+            new SkillModel('React', 40),
+            new SkillModel('jQuery', 75),
+            new SkillModel('Python', 80),
+            new SkillModel('Pandas/NumPy', 40),
+            new SkillModel('R', 25),
+            new SkillModel('Dart', 75),
+            new SkillModel('Flutter', 60),
+            new SkillModel('PHP', 90),
+            new SkillModel('Code Igniter', 85),
+            new SkillModel('Communication', 90),
+            new SkillModel('Problem Solving', 75),
+            new SkillModel('Decision Solving', 70),
+            new SkillModel('Research', 80),
+        ]
+    }
 
 }
 
-class SkillModel {
-  public Name: string;
-  public Percent: number;
+class SkillCategoryModel {
+    public Name: string;
+    public Skills: string[][];
 
-  constructor(name: string, percent: number) {
-    this.Name = name;
-    this.Percent = percent;
-  }
+    constructor(name: string, skills: string[][]) {
+        this.Name = name;
+        this.Skills = skills;
+    }
+}
+
+
+class SkillModel {
+    public Name: string;
+    public Percent: number;
+
+    constructor(name: string, percent: number) {
+        this.Name = name;
+        this.Percent = percent;
+    }
 }
