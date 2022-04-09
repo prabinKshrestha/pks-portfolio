@@ -18,12 +18,13 @@
         h1 {
             margin: 0;
             font-size: 22px;
+            line-height: 28px;
         }
         h3 {
             margin: 0;
             font-size: 14px;
+            line-height: 20px;
             font-weight: normal;
-            margin-top: -6px;
         }
     }
     .social-links {
@@ -54,12 +55,16 @@
             text-transform: uppercase;
             li {
                 padding: 2px 0px;
+                font-size: 15px;
                 a {
                     text-decoration: none;
                     cursor: pointer;
                     color: inherit;
                     &.active {
                         color: #3e64ff;
+                        border-bottom: 1px solid #3e64ff;
+                    }
+                    &:hover {
                         border-bottom: 1px solid #3e64ff;
                     }
                 }

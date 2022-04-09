@@ -1,20 +1,38 @@
-$min-width-sidenav: 320px;
 .layout-wrapper {
-    margin: 0 10vw;
     display: flex;
+    @media (min-width: 1200px) {
+        margin: 0 5vw;
+    }
     .sidenav-wrapper {
-        min-width: $min-width-sidenav;
+        min-width: var(--sidenav-width);
+        max-width: var(--sidenav-width);
+        width: var(--sidenav-width);
         background-color: rgba(#3e64ff, 0.1);
         height: 100vh;
         overflow-y: auto;
         overflow-x: hidden;
         position: fixed;
+        padding: 0 10px;
     }
     .content-wrapper {
         flex-grow: 1;
-        margin-left: $min-width-sidenav;
+        margin-left: var(--sidenav-width);
         .section-wrapper {
             padding: 50px 40px;
         }
     }
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 10px;
 }
