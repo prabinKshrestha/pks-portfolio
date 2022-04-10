@@ -41,6 +41,10 @@
             max-width: 45%;
             position: relative;
             width: 100%;
+            @media (max-width: 850px) {
+                flex: 0 0 80%;
+                max-width: 80%;
+            }
             .progress-wrap {
                 padding: 10px 0px;
                 h3 {

@@ -15,6 +15,9 @@
                 }
             }
             .row-value {
+                @media (max-width: 576px) {
+                    display: block;
+                }
                 a {
                     text-decoration: none;
                     color: inherit;

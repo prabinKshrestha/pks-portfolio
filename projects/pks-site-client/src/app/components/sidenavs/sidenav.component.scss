@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     color: black;
+    z-index: 9999;
     .image {
         img {
             width: 150px;
@@ -73,5 +74,6 @@
     }
     .copyrights {
         font-size: 14px;
+        text-align: center;
     }
 }

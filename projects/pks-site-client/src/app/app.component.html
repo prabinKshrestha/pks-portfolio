@@ -1,8 +1,11 @@
 <div class="layout-wrapper">
-    <div class="sidenav-wrapper">
+    <div class="menu">
+        <i class="fa-solid fa-bars" (click)="toggleSidenav()"></i>
+    </div>
+    <div class="sidenav-wrapper" [ngClass]="{'show': isSideNavOpen}">
         <pks-sidenav></pks-sidenav>
     </div>
-    <div class="content-wrapper">
+    <div class="content-wrapper" (click)="toggleSidenav(true)">
         <div class="section-wrapper" id="home">
             <pks-welcome></pks-welcome>
         </div>
